@@ -4,8 +4,6 @@ import com.chel.auth.models.UserService;
 import com.google.gson.Gson;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -23,10 +21,8 @@ public class UserController {
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public ResponseEntity<Object> checkUser(@RequestBody String body) {
+    public String checkUser(@RequestBody String body) {
         User user = new Gson().fromJson(body, User.class);
-//        System.out.println(user);
-        String token = userService.authenticate(user);
-        return new ResponseEntity<>(new Gson().toJson(token), HttpStatus.OK);
+        return userService.authenticate(user);
     }
 }

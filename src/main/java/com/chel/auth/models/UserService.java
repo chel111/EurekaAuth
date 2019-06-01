@@ -5,7 +5,6 @@ import com.chel.auth.entities.User;
 import com.chel.auth.repos.UserRepo;
 import com.chel.auth.security.JwtConfig;
 import com.google.gson.Gson;
-import io.jsonwebtoken.Claims;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

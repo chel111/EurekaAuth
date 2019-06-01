@@ -19,7 +19,6 @@ public class JwtConfig {
             "aI3fDR2XwlSkyhhmY-ICjCRmsJN4fX1pdoL8a18-aQrvyu4j0Os6dVPYIoPvvY0SAZtWYKH" +
             "fM15g7A3HD4cVREf9cUsprCRK93wSjklnSAdjenaKSifjan-SdnasaEsmGrmg912xaAfvA";
 
-    //Sample method to construct a JWT
     public static String createJWT(String subject) {
 
         //The JWT signature algorithm we will be using to sign the token
@@ -36,7 +35,6 @@ public class JwtConfig {
 
 
         //Builds the JWT and serializes it to a compact, URL-safe string
-
         return builder.compact();
     }
 
